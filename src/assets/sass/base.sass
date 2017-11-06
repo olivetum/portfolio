@@ -1,0 +1,43 @@
+@import variables
+@import mixins
+@import typography
+@import mobile
+
+// Responsivness
+.mobile-only
+  @media only screen and (min-width: 750px)
+    display: none !important
+.desktop-only
+  @media only screen and (max-width: 751px)
+    display: none !important
+
+
+
+
+#app
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  padding-top: 20px
+.container
+  width: 70vw
+  @media only screen and (max-width: 751px)
+    width: 90vw
+.full-flex
+  display: flex
+  justify-content: space-between
+.flex-center
+  display: flex
+  align-items: center
+
+
+.top-bar
+  display: flex
+  flex-wrap: wrap
+.logo
+  height: 60px
+.hello
+  height: 50vh
+  p
+    margin-left: 50px
+    margin-right: 50px
