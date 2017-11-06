@@ -5,10 +5,10 @@
 
 // Responsivness
 .mobile-only
-  @media only screen and (min-width: 750px)
+  @media only screen and (min-width: $mobile)
     display: none !important
 .desktop-only
-  @media only screen and (max-width: 751px)
+  @media only screen and (max-width: $desktop)
     display: none !important
 
 
@@ -21,7 +21,7 @@
   padding-top: 20px
 .container
   width: 70vw
-  @media only screen and (max-width: 751px)
+  @media only screen and (max-width: $desktop)
     width: 90vw
 .full-flex
   display: flex
@@ -34,10 +34,26 @@
 .top-bar
   display: flex
   flex-wrap: wrap
+  h1
+    font-size: 220%
+    @media only screen and (max-width: $desktop)
+      width: 90%
 .logo
   height: 60px
+  @media only screen and (max-width: $desktop)
+    display: block
+    margin:  0 auto
+    position: absolute
+    left: calc(50% - 30px)
+    top: 20vh
 .hello
   height: 50vh
   p
     margin-left: 50px
     margin-right: 50px
+
+.menu-button
+  @media only screen and (min-width: $desktop)
+      position: absolute
+      right: 15vw
+      top: 60vh
