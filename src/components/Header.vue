@@ -2,7 +2,7 @@
 <div>
   <div class="container full-flex top-bar">
     <h1>{{tml}}</h1>
-    <img style="order: 4;" class="logo" src="../assets/img/logo.svg" />
+    <img style="order: 4;" class="logo" :src="logo" />
     <div style="background-color: black; width: 22px; height: 18px; order: 1;" class="menu-button">
 
     </div>
@@ -10,7 +10,7 @@
 
   <div class="container flex-center hello serif center-txt">
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <span class="desktop-only">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+      I am a graphic designer and web developer living and working in Warsaw.<br> <span class="desktop-only">Check out my work and tell me how I can help.</span>
     </p>
   </div>
 
@@ -23,7 +23,8 @@
   export default {
     data () {
       return {
-        tml: 'Tumiładnie'
+        tml: 'Tumiładnie',
+        logo: './src/assets/img/logo.svg'
       }
     }
   }
