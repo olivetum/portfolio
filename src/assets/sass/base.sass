@@ -124,23 +124,28 @@
         bottom: 10px !important
         top: inherit
         right: 40px
-      .description
+      .description-wraper
+        width: 100%
+        height: 25%
+        padding: 40px
         position: absolute
         bottom: 0
-        right: -20px
-        margin-right: 40px
-        color: white
-        text-align: right
-        max-width: 75%
-        font-size: 90%
-      .description-left
-        @extend .description
-        top: 40px
-        left: 40px
-        text-align: left
-        @media only screen and (max-width: $desktop)
-          left: 20px
-          top: 20px
+        background: rgba(253, 253, 253, 0.87)
+        .description
+          right: -20px
+          margin-right: 40px
+          color: white
+          max-width: 75%
+          font-size: 90%
+          color: $color-5
+        .description-left
+          @extend .description
+          top: 40px
+          left: 40px
+          text-align: left
+          @media only screen and (max-width: $desktop)
+            left: 20px
+            top: 20px
     .box-tall
       @extend .box
       height: 60vh

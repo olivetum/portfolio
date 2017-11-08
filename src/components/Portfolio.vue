@@ -6,7 +6,7 @@
        <div>
          <h3 class="title">{{item.name}}</h3>
          <div class="work-bg" :style="{background: item.bac}"></div>
-         <p class="description">{{item.description}}</p>
+         <div class="description-wraper"><p class="description">{{item.description}}</p></div>
      </div>
     </a>
    </div>
@@ -20,7 +20,7 @@
         works: [
           {
             name: 'Hollow Quartet',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            description: 'Lorem ipsum dolor sit amet, \n consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
             link: 'http://hollowquartet.pl',
             bac: 'rgba(227, 181, 5, .8)',
             img: "url('./src/assets/img/works/hq.jpg')",
