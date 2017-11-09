@@ -99,9 +99,10 @@ a
         &:hover
           .title
             bottom: 35%
-            background: black
+            background: rgba(0, 0, 0, 0.81)
           .description-wraper
             bottom: 0
+            opacity: 1
           #show-modal
             opacity: 1
       .work-bg
@@ -114,8 +115,8 @@ a
         bottom: 1%
         z-index: 2
         font-size: 220%
-        font-weight: 400
-        font-family: $Serif
+        font-weight: 600
+        font-family: $Sans-Serif
         line-height: 100%
         color: white
         margin-top: 20px
@@ -133,8 +134,8 @@ a
         padding: 20px
         min-height: 22%
         position: absolute
-        bottom: -100px
-        background: rgba(253, 253, 253, 0.87)
+        bottom: -18px
+        opacity: 0
         transition: all .6s
         @media only screen and (max-width: $desktop)
           bottom: 0
@@ -144,7 +145,7 @@ a
           color: white
           max-width: 95%
           font-size: 90%
-          color: $color-5
+          color: white
           margin-bottom: 0
         .description-left
           @extend .description
@@ -162,6 +163,12 @@ a
     .box-tall
       @extend .box
       height: 60vh
+
+
+.bombka
+  width: 100%
+  height: 40vh
+  background-size: cover !important
 
 .me
   @media only screen and (max-width: $desktop)

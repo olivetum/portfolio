@@ -25,13 +25,13 @@
           </h4>
          <div class="work-bg" :style="{background: item.bac}"></div>
          <div class="description-wraper">
-           <p class="description">{{item.description}}
-
-           </p>
+           <p class="description">{{item.description}}</p>
          </div>
      </div>
      <modal v-if="item.showModal" @close="item.showModal = false">
-       <h3 slot="header">{{item.name}}</h3>
+       <div class="bombka" :style="{background: item.img}" slot="header">{{item.name}}</div>
+       <p class="modal-body bg1" slot="body">{{item.description}}</p>
+
      </modal>
    </div>
    </div>
