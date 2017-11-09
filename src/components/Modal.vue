@@ -19,10 +19,10 @@
 
           <div class="modal-footer">
             <slot name="footer">
-              default footer
-              <button class="modal-default-button noHoverClass" @click="$emit('close')">
-                OK
-              </button>
+              Tumiładnie
+                <i class=" modal-default-button fa fa-level-down fa-2x" aria-hidden="true" @click="$emit('close')"></i>
+
+
             </slot>
           </div>
         </div>
@@ -71,17 +71,30 @@
 
 .modal-header h3 {
   margin-top: 0;
-  color: #42b983;
 }
 
 .modal-body {
   height: 40vh;
+}
+.modal-body {
+  padding: 10px;
+  color: white;
 }
 
 .modal-default-button {
   float: right;
 }
 
+.modal-footer {
+
+  padding: 25px;
+  font-weight: 600;
+}
+
+.fa {
+  cursor: pointer;
+  margin-bottom: -15px;
+}
 /*
  * The following styles are auto-applied to elements with
  * transition="modal" when their visibility is toggled

@@ -29,8 +29,12 @@
          </div>
      </div>
      <modal v-if="item.showModal" @close="item.showModal = false">
-       <div class="bombka" :style="{background: item.img}" slot="header">{{item.name}}</div>
-       <p class="modal-body bg1" slot="body">{{item.description}}</p>
+       <div class="bombka" :style="{background: item.img}" slot="header"></div>
+
+       <div class="modal-body bg1" :style="{background: item.bac}" slot="body">
+         <h4 class="modal-title">{{item.name}}</h4>
+         <p>{{item.description}}</p>
+       </div>
 
      </modal>
    </div>
