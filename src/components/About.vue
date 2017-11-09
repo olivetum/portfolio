@@ -2,9 +2,9 @@
   <div class="wraper">
    <h2>About <span class="txt3">/</span> Owerview</h2>
    <div class="boxes">
-     <div class="box-tall about">
+     <div class="box-tall about nohover" style="transform: translate3d(-10px, -10px, 0)">
        <div>
-         <div class="work-bg bg4"></div>
+         <div class="work-bg bg4" ></div>
          <div style="position: relative; padding: 40px; color: white;">
              <h3>Hi</h3>
              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. laborum.</p>

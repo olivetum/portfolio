@@ -3,7 +3,7 @@
   <div class="container full-flex top-bar">
     <h1>{{tml}}</h1>
     <img style="order: 4;" class="logo" :src="logo" />
-    <div style="background-color: black; width: 22px; height: 18px; order: 1;" class="menu-button">
+    <div style="background-color: black; width: 22px; height: 18px; order: 1; z-index: 1000;" class="menu-button">
 
     </div>
   </div>
