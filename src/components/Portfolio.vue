@@ -35,11 +35,25 @@
          <slide v-for="picture in item.imgs" class="bombka">
             <img :src="picture.img" />
          </slide>
+         <slide v-if="item.details">
+           <div style="padding: 20px;">
+             <h4 class="modal-title" style="color: #197278;">What was the problem?</h4>
+             <p>
+               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+             </p>
+             <h4 class="modal-title" style="color: #197278;">The conception.</h4>
+             <p>
+               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+             </p>
+             <h4 style="color: #197278;">Use arrows or dots to change slide and see image assets.</h4>
+           </div>
+         </slide>
        </carousel>
 
        <div class="modal-body bg1" slot="body">
          <h4 class="modal-title">{{item.name}}</h4>
          <p>{{item.description}}</p>
+         <h4 v-if="item.details">You will find detailed information about project on last slide.</h4>
          <h4 v-if="item.link" class="modal-title">Visit:
            <a :href="item.link" target="_blank">
              <i style="border-bottom: 1px solid orange; margin-left: 5px;"
@@ -69,7 +83,7 @@
           {
             test: [{img1: 'lol'}],
             name: 'Kathy Simon',
-            description: 'Album cover for country band based in Poland, Warsaw.',
+            description: 'Album cover for a country music band from Poland.',
             type: 'Album cover',
             data: '2017',
             bac: 'rgba(190, 90, 78, .8)',
@@ -89,9 +103,10 @@
             type: 'Website',
             link: 'http://hollowquartet.pl',
             bac: 'rgba(227, 181, 5, .8)',
-            img: "url('./src/assets/img/works/hq.jpg')",
+            img: "url('./src/assets/img/works/HollowQuartet/hq.jpg')",
             imgs: [
-              {img: "./src/assets/img/works/HollowQuartet/hq.jpg"}
+              {img: "./src/assets/img/works/HollowQuartet/hq_1.jpg"},
+              {img: "./src/assets/img/works/HollowQuartet/hq_2.jpg"}
             ],
             modal: true,
             showModal: false
@@ -102,19 +117,26 @@
             type: 'Website',
             link: 'http://marekbracha.pl',
             bac: 'rgba(25, 114, 120, .8)',
-            img: "url('./src/assets/img/works/marek.jpg')",
+            img: "url('./src/assets/img/works/MarekBRacha/marek.jpg')",
             imgs: [
-              {img: "./src/assets/img/works/MarekBRacha/marek.jpg"}
+              {img: "./src/assets/img/works/MarekBRacha/mb_1.jpg"},
+              {img: "./src/assets/img/works/MarekBRacha/mb_2.jpg"}
             ],
             modal: true,
             showModal: false
           },
           {
-            name: 'Lorem',
+            name: 'Posters',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
             type: 'Print',
             bac: 'rgba(190, 90, 78, .8)',
-            img: "url('./src/assets/img/bg.jpg')",
+            img: "url('./src/assets/img/works/Posters/hq_wide.jpg')",
+            imgs: [
+              {img: "./src/assets/img/works/Posters/hq_wide.jpg"},
+              {img: "./src/assets/img/works/Posters/imuz_koncert.jpg"},
+              {img: "./src/assets/img/works/Posters/konkurs_g.jpg"},
+              {img: "./src/assets/img/works/Posters/6Plyt.jpg"}
+            ],
             modal: true,
             showModal: false
           },
@@ -124,7 +146,10 @@
             type: 'Website',
             bac: 'rgba(33, 29, 34, .8)',
             img: "url('./src/assets/img/works/template.png')",
-            modal: false,
+            imgs: [
+              {img: "./src/assets/img/works/MarekBRacha/marek.jpg"}
+            ],
+            modal: true,
             showModal: false
           }
         ]
