@@ -6,7 +6,10 @@
  <div v-for="item in works" class="box" :class="{noHover: item.showModal}" :style="{background: item.img}">
        <div>
 
-         <h4 class="title"><span style="font-size: 50%; text-decoration: underline">{{item.type}}</span><br />{{item.name}}
+         <h4 class="title">
+           <span style="font-size: 50%; text-decoration: underline">{{item.type}}</span>
+           <br>
+           {{item.name}}
            <i  v-if="item.modal"
                   id="show-modal"
                   @click="item.showModal = true"
@@ -25,17 +28,25 @@
           </h4>
          <div class="work-bg" :style="{background: item.bac}"></div>
          <div class="description-wraper">
-           <p class="description">{{item.description}}</p>
+           <p class="description">
+             {{item.description}}<br>
+             <strong>{{item.data}}</strong>
+           </p>
+
          </div>
      </div>
      <modal v-if="item.showModal" @close="item.showModal = false">
-       <carousel v-if="item.imgs" :perPage="1" slot="header">
+       <carousel  v-if="item.imgs"
+                  :perPage="1"
+                  :navigationEnabled="true"
+                  paginationActiveColor="#197278"
+                  slot="header">
          <slide v-for="picture in item.imgs" class="bombka">
             <img :src="picture.img" />
          </slide>
        </carousel>
 
-       <div class="modal-body bg1" :style="{background: item.bac}" slot="body">
+       <div class="modal-body bg1" slot="body">
          <h4 class="modal-title">{{item.name}}</h4>
          <p>{{item.description}}</p>
        </div>
@@ -62,12 +73,14 @@
             name: 'Kathy Simon',
             description: 'Album cover for country band based in Poland, Warsaw.',
             type: 'Album cover',
+            data: '2017',
             bac: 'rgba(190, 90, 78, .8)',
             img: "url('./src/assets/img/works/KathySimon/kathySimo_wide.png')",
             imgs: [
               {img: "./src/assets/img/works/KathySimon/kathySimo_wide.png"},
               {img: "./src/assets/img/works/KathySimon/KathySimon_EP_Wide.jpg"},
-              {img: "./src/assets/img/works/KathySimon/kathySimo_wide.png"}
+              {img: "./src/assets/img/works/KathySimon/KathySimon_EP_B_Wide.jpg"},
+              {img: "./src/assets/img/works/KathySimon/KathySimon_Mockup_Wide.jpg"}
             ],
             modal: true,
             showModal: false
