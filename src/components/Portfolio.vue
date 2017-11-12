@@ -30,9 +30,7 @@
      </div>
      <modal v-if="item.showModal" @close="item.showModal = false">
        <carousel :perPage="1" slot="header">
-         <slide v-for="picture in item.imgs">
-           <div class="bombka" :style="{background: picture.img}"></div>
-         </slide>
+         <slide v-for="picture in item.imgs" class="bombka" :style="{background: picture.img}"></slide>
        </carousel>
 
        <div class="modal-body bg1" :style="{background: item.bac}" slot="body">
