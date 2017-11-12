@@ -29,16 +29,16 @@
          </div>
      </div>
      <modal v-if="item.showModal" @close="item.showModal = false">
-       <carousel :perPage="1" slot="header">
-         <slide v-for="picture in item.imgs" class="bombka" :style="{background: picture.img}"></slide>
+       <carousel v-if="item.imgs" :perPage="1" slot="header">
+         <slide v-for="picture in item.imgs" class="bombka">
+            <img :src="picture.img" />
+         </slide>
        </carousel>
 
        <div class="modal-body bg1" :style="{background: item.bac}" slot="body">
          <h4 class="modal-title">{{item.name}}</h4>
          <p>{{item.description}}</p>
-
        </div>
-
      </modal>
    </div>
    </div>
@@ -48,24 +48,26 @@
 <script>
   import Modal from './Modal.vue'
   import { Carousel, Slide } from 'vue-carousel'
+  import VueSilentbox from 'vue-silentbox'
+
 
   export default {
-    components: { Carousel, Slide, Modal },
+    components: { VueSilentbox, Carousel, Slide, Modal },
     data () {
       return {
 
         works: [
           {
             test: [{img1: 'lol'}],
-            name: 'Kathy Cimon',
+            name: 'Kathy Simon',
             description: 'Album cover for country band based in Poland, Warsaw.',
             type: 'Album cover',
             bac: 'rgba(190, 90, 78, .8)',
             img: "url('./src/assets/img/works/KathySimon/kathySimo_wide.png')",
             imgs: [
-              {img: "url('./src/assets/img/works/KathySimon/kathySimo_wide.png')"},
-              {img: "url('./src/assets/img/works/KathySimon/kathySimo_wide.png')"},
-              {img: "url('./src/assets/img/works/hq.jpg')"}
+              {img: "./src/assets/img/works/KathySimon/kathySimo_wide.png"},
+              {img: "./src/assets/img/works/KathySimon/KathySimon_EP_Wide.jpg"},
+              {img: "./src/assets/img/works/KathySimon/kathySimo_wide.png"}
             ],
             modal: true,
             showModal: false
@@ -92,11 +94,6 @@
             type: 'Print',
             bac: 'rgba(190, 90, 78, .8)',
             img: "url('./src/assets/img/bg.jpg')",
-            imgs: [
-              {img: "url('./src/assets/img/works/KathySimon/kathySimo_wide.png')"},
-              {img: "url('./src/assets/img/works/KathySimon/kathySimo_wide.png')"},
-              {img: "url('./src/assets/img/works/hq.jpg')"}
-            ],
             modal: true,
             showModal: false
           },

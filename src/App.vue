@@ -13,7 +13,6 @@ import Header from './components/Header.vue'
 import Portfolio from './components/Portfolio.vue'
 import About from './components/About.vue'
 
-import VueCarousel from 'vue-carousel'
 
 
 export default {

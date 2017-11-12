@@ -60,7 +60,7 @@
 }
 
 .modal-container {
-  width: 500px;
+  width: 60%;
   margin: 0px auto;
   background-color: #fff;
   border-radius: 2px;
@@ -68,13 +68,23 @@
   transition: all .3s ease;
   font-family: Helvetica, Arial, sans-serif;
 }
+@media only screen and (max-width: 751px) {
+  .modal-container {
+    width: 90%;
+  }
+}
+@media only screen and (max-height: 551px) {
+  .modal-container {
+    width: 40%;
+  }
+}
 
 .modal-header h3 {
   margin-top: 0;
 }
 
 .modal-body {
-  height: 40vh;
+  height: auto;
 }
 .modal-body {
   padding: 10px;

@@ -1,7 +1,11 @@
 import Vue from 'vue'
 import App from './App.vue'
 
+import VueSilentbox from 'vue-silentbox'
+
 import base from './assets/sass/base.min.css'
+
+Vue.use(VueSilentbox);
 
 new Vue({
   el: '#app',

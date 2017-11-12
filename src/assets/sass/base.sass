@@ -53,17 +53,20 @@ a
     margin:  0 auto
     position: absolute
     left: calc(50% - 30px)
-    top: 28vh
+    top: 20vh
 .hello
   height: 66vh
   width: 100%
-  display: flex
-  justify-content: space-between
+  justify-content: flex-end
+  @media only screen and (max-width: $desktop)
+    justify-content: center
   p
     font-size: 120%
     line-height: 140%
     margin-top: 4em
     width: 55%
+    @media only screen and (max-width: $desktop)
+      width: 70%
 
 .menu-button
   @media only screen and (min-width: $desktop)
@@ -167,19 +170,24 @@ a
         opacity: 0
         transition: all .6s
         transition-delay: .3s
+        @media only screen and (max-width: $desktop)
+          opacity: 1
     .box-tall
       @extend .box
       height: 60vh
 
 .modal-title
   margin-top: 0
-  font-size: 230%
+  font-size: 150%
   color: white
 .bombka
   width: 100%
-  height: 40vh
+  height: auto
   background-size: cover !important
   background-position: center !important
+  img
+    width: 100%
+    display: block
 
 .me
   @media only screen and (max-width: $desktop)
@@ -190,7 +198,7 @@ a
 
 .VueCarousel-pagination
   position: absolute
-  top: 84%
+  bottom: 0
 
 // Theme
 .txt1

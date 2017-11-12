@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "vue": "^2.4.4",
-    "vue-carousel": "^0.6.5"
+    "vue-carousel": "^0.6.5",
+    "vue-silentbox": "^0.1.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
