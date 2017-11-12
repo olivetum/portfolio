@@ -16,15 +16,6 @@
                   style="border-bottom: 1px solid orange; margin-left: 5px;"
                   class="fa fa-picture-o"
                   aria-hidden="true"></i>
-            <a :href="item.link" target="_blank">
-              <i  v-if="!item.modal"
-                  id="show-modal"
-                  style="border-bottom: 1px solid orange; margin-left: 5px;"
-                  class="fa fa-external-link"
-                  aria-hidden="true">
-                </i>
-              </a>
-
           </h4>
          <div class="work-bg" :style="{background: item.bac}"></div>
          <div class="description-wraper">
@@ -49,6 +40,13 @@
        <div class="modal-body bg1" slot="body">
          <h4 class="modal-title">{{item.name}}</h4>
          <p>{{item.description}}</p>
+         <h4 v-if="item.link" class="modal-title">Visit:
+           <a :href="item.link" target="_blank">
+             <i style="border-bottom: 1px solid orange; margin-left: 5px;"
+                class="fa fa-external-link"
+                aria-hidden="true"></i>
+           </a>
+          </h4>
        </div>
      </modal>
    </div>
@@ -92,6 +90,11 @@
             link: 'http://hollowquartet.pl',
             bac: 'rgba(227, 181, 5, .8)',
             img: "url('./src/assets/img/works/hq.jpg')",
+            imgs: [
+              {img: "./src/assets/img/works/HollowQuartet/hq.jpg"}
+            ],
+            modal: true,
+            showModal: false
           },
           {
             name: 'Marek Bracha',
@@ -100,6 +103,11 @@
             link: 'http://marekbracha.pl',
             bac: 'rgba(25, 114, 120, .8)',
             img: "url('./src/assets/img/works/marek.jpg')",
+            imgs: [
+              {img: "./src/assets/img/works/MarekBRacha/marek.jpg"}
+            ],
+            modal: true,
+            showModal: false
           },
           {
             name: 'Lorem',

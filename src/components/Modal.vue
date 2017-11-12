@@ -21,8 +21,6 @@
             <slot name="footer">
               Tumiładnie
                 <i class=" modal-default-button fa fa-level-down fa-2x" aria-hidden="true" @click="$emit('close')"></i>
-
-
             </slot>
           </div>
         </div>
@@ -87,7 +85,7 @@
   height: auto;
 }
 .modal-body {
-  padding: 10px;
+  padding: 20px;
   color: white;
 }
 
