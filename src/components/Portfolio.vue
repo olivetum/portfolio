@@ -51,6 +51,15 @@
 
         works: [
           {
+            name: 'Kathy Cimon',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            type: 'Album cover',
+            bac: 'rgba(190, 90, 78, .8)',
+            img: "url('./src/assets/img/works/KathySimon/kathySimo_wide.png')",
+            modal: true,
+            showModal: false
+          },
+          {
             name: 'Hollow Quartet',
             description: 'Lorem ipsum dolor sit amet, \n consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
             type: 'Website',
