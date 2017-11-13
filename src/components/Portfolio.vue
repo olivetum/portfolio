@@ -117,10 +117,10 @@
             type: 'Website',
             link: 'http://marekbracha.pl',
             bac: 'rgba(92, 92, 92, 0.8)',
-            img: "url('./src/assets/img/works/MarekBRacha/marek.jpg')",
+            img: "url('./src/assets/img/works/MarekBracha/marek.jpg')",
             imgs: [
-              {img: "./src/assets/img/works/MarekBRacha/mb_1.jpg"},
-              {img: "./src/assets/img/works/MarekBRacha/mb_2.jpg"}
+              {img: "./src/assets/img/works/MarekBracha/mb_1.jpg"},
+              {img: "./src/assets/img/works/MarekBracha/mb_2.jpg"}
             ],
             modal: true,
             showModal: false

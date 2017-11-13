@@ -22,7 +22,7 @@
   export default {
     data () {
       return {
-        name: 'MATEUSZ RÓŻALSKI DESIGNER',
+        name: 'MATEUSZ RÓŻALSKI DESIGN',
         logo: './src/assets/img/logo.svg'
       }
     }

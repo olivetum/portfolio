@@ -87,8 +87,7 @@
 .modal-body {
   padding: 20px;
   color: black;
-  border-top: 1px solid black;
-  border-bottom: 1px solid #e3b505;
+  background: #e3b505;
 }
 
 .modal-default-button {
