@@ -12,7 +12,8 @@
     display: none !important
 
 
-
+a
+  color: $color-4
 
 #app
   margin-left: 15vw
@@ -33,12 +34,14 @@
 .flex-center
   display: flex
   align-items: center
+.flex-end
+  display: flex
+  justify-content: flex-end
 
 
 .top-bar
   display: flex
   flex-wrap: wrap
-  height: 8vh
   h1
     font-size: 220%
     @media only screen and (max-width: $desktop)
@@ -52,20 +55,24 @@
     left: calc(50% - 30px)
     top: 20vh
 .hello
-  height: 68vh
+  height: 66vh
+  width: 100%
+  justify-content: flex-end
+  @media only screen and (max-width: $desktop)
+    justify-content: center
   p
-    font-size: 140%
+    font-size: 120%
     line-height: 140%
     margin-top: 4em
-    margin-left: 50px
-    margin-right: 50px
-    width: 100%
+    width: 55%
+    @media only screen and (max-width: $desktop)
+      width: 70%
 
 .menu-button
   @media only screen and (min-width: $desktop)
       position: absolute
       right: 15vw
-      top: 93vh
+      top: 23vh
 
 .wraper
   h2
@@ -75,7 +82,7 @@
     z-index: 2
     @media only screen and (max-width: $desktop)
       font-size: 300%
-      top: 6vh
+      top: 5vh
   .boxes
     width: 100%
     display: flex
@@ -87,19 +94,23 @@
       height: 40vh
       background-size: cover !important
       background-position: center !important
-      transition: all .4s
-      transition-delay: .1s
+      transition: all .6s
+      overflow: hidden
       @media only screen and (max-width: $desktop)
         width: 100%
-      &:hover
-        -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,1)
-        -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,1)
-        box-shadow: 0px 0px 5px 0px rgba(0,0,0,1)
+        height: 70vh
+        margin-bottom: 10px
+      &:not(.noHover):hover
       @media only screen and (min-width: $desktop)
-        &:hover:nth-child(2n)
-          transform: translate3d(10px, -10px, 0)
         &:hover
-          transform: translate3d(-10px, -10px, 0)
+          .title
+            bottom: 35%
+            background: rgba(0, 0, 0, 0.81)
+          .description-wraper
+            bottom: 0
+            opacity: 1
+          #show-modal
+            opacity: 1
       .work-bg
         width: 100%
         height: 100%
@@ -107,40 +118,87 @@
         top: 0
       .title
         position: absolute
-        top: 0
+        bottom: 1%
         z-index: 2
-        font-size: 320%
-        font-weight: 400
-        font-family: $Serif
+        font-size: 220%
+        font-weight: 600
+        font-family: $Sans-Serif
+        line-height: 100%
         color: white
         margin-top: 20px
         transition: all .6s
-        margin-left: .7em
+        padding: .7em
+        padding-top: .2em
         @media only screen and (max-width: $desktop)
-          left: -20px
-      .description
+          font-size: 180%
+          bottom: 29%
+          background: black
+      .title-bottom
+        @extend .title
+        bottom: 10px !important
+        top: inherit
+        right: 40px
+      .description-wraper
+        padding: 20px
+        min-height: 22%
         position: absolute
-        bottom: 0
-        right: -20px
-        margin-right: 40px
-        color: white
-        text-align: right
-        max-width: 75%
-        font-size: 90%
-      .description-left
-        @extend .description
-        top: 100px
-        left: 40px
-        text-align: left
+        bottom: -18px
+        opacity: 0
+        transition: all .6s
+        transition-delay: .2s
         @media only screen and (max-width: $desktop)
-          left: 20px
+          bottom: 0
+          opacity: 1
+        .description
+          right: -20px
+          margin-right: 40px
+          color: white
+          max-width: 95%
+          font-size: 90%
+          color: white
+          margin-bottom: 0
+        .description-left
+          @extend .description
+          top: 40px
+          left: 40px
+          text-align: left
+          @media only screen and (max-width: $desktop)
+            left: 20px
+            top: 20px
+      #show-modal
+        cursor: pointer
+        opacity: 0
+        transition: all .6s
+        transition-delay: .3s
+        @media only screen and (max-width: $desktop)
+          opacity: 1
     .box-tall
       @extend .box
       height: 60vh
 
+.modal-title
+  margin-top: 0
+  font-size: 150%
+  color: black
+.bombka
+  width: 100%
+  height: auto
+  background-size: cover !important
+  background-position: center !important
+  img
+    width: 100%
+    display: block
 
+.me
+  @media only screen and (max-width: $desktop)
+   order: 0
+.about
+  @media only screen and (max-width: $desktop)
+   order: 2
 
-
+.VueCarousel-pagination
+  position: absolute
+  bottom: -10px
 // Theme
 .txt1
   color: $color-1

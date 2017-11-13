@@ -1,6 +1,6 @@
 <template>
   <div class="wraper">
-   <h2>About <span class="txt3">/</span> Owerview</h2>
+   <h2>About <span class="txt4">/</span> Owerview</h2>
    <div class="boxes">
      <div class="box-tall nohover" style="transform: translate3d(-10px, -10px, 0)">
        <div>

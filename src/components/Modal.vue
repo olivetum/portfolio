@@ -19,7 +19,7 @@
 
           <div class="modal-footer">
             <slot name="footer">
-              Tumiładnie
+              MATEUSZ RÓŻALSKI DESIGN
                 <i class=" modal-default-button fa fa-level-down fa-2x" aria-hidden="true" @click="$emit('close')"></i>
             </slot>
           </div>
@@ -86,7 +86,9 @@
 }
 .modal-body {
   padding: 20px;
-  color: white;
+  color: black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid #e3b505;
 }
 
 .modal-default-button {
@@ -94,7 +96,7 @@
 }
 
 .modal-footer {
-
+  font-family: 'Barlow Semi Condensed', sans-serif;
   padding: 25px;
   font-weight: 600;
 }
